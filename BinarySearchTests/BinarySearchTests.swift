@@ -11,10 +11,8 @@ import XCTest
 struct Program {
     func search(in array: [Int], target: Int) -> Int? {
         
-        for number in array {
-            if number == target {
-                return number
-            }
+        for number in array where number == target {
+            return number
         }
         
         return nil
