@@ -24,5 +24,14 @@ final class BinarySearchTests: XCTestCase {
         
         XCTAssertNil(result)
     }
+    
+    func test_search_shouldReturnsNilWhenNotFound() {
+        let sample = [1]
+        let sut = Program()
+        
+        let result = sut.search(in: sample, target: 7)
+        
+        XCTAssertNil(result)
+    }
 
 }
