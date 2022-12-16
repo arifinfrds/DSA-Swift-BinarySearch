@@ -16,7 +16,7 @@ struct Program {
 
 final class BinarySearchTests: XCTestCase {
     
-    func test_search_shouldReturnsNilWhenNotFound() {
+    func test_search_shouldReturnsNilWhenArrayIsEmpty() {
         let emptyArray = [Int]()
         let sut = Program()
         
