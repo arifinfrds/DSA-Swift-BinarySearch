@@ -9,7 +9,7 @@ import XCTest
 @testable import BinarySearch
 
 struct Program {
-    func search(in array: [Int], target: Int) -> Int? {
+    func binarySearch(in array: [Int], target: Int) -> Int? {
         
         for number in array where number == target {
             return number
@@ -25,7 +25,7 @@ final class BinarySearchTests: XCTestCase {
         let emptyArray = [Int]()
         let sut = Program()
         
-        let result = sut.search(in: emptyArray, target: 7)
+        let result = sut.binarySearch(in: emptyArray, target: 7)
         
         XCTAssertNil(result)
     }
@@ -34,7 +34,7 @@ final class BinarySearchTests: XCTestCase {
         let sample = [1]
         let sut = Program()
         
-        let result = sut.search(in: sample, target: 7)
+        let result = sut.binarySearch(in: sample, target: 7)
         
         XCTAssertNil(result)
     }
@@ -43,7 +43,7 @@ final class BinarySearchTests: XCTestCase {
         let sample = [7]
         let sut = Program()
         
-        let result = sut.search(in: sample, target: 7)
+        let result = sut.binarySearch(in: sample, target: 7)
         
         XCTAssertEqual([result], sample)
     }
@@ -52,7 +52,7 @@ final class BinarySearchTests: XCTestCase {
         let sample = [1, 7, 3]
         let sut = Program()
         
-        let result = sut.search(in: sample, target: 7)
+        let result = sut.binarySearch(in: sample, target: 7)
         
         XCTAssertEqual(result, 7)
     }
