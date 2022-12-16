@@ -10,6 +10,13 @@ import XCTest
 
 struct Program {
     func search(in array: [Int], target: Int) -> Int? {
+        
+        for number in array {
+            if number == target {
+                return number
+            }
+        }
+        
         return nil
     }
 }
@@ -32,6 +39,15 @@ final class BinarySearchTests: XCTestCase {
         let result = sut.search(in: sample, target: 7)
         
         XCTAssertNil(result)
+    }
+    
+    func test_search_shouldReturnsFoundNumberWhenFoundNumberOnSingleArrayItem() {
+        let sample = [7]
+        let sut = Program()
+        
+        let result = sut.search(in: sample, target: 7)
+        
+        XCTAssertEqual([result], sample)
     }
 
 }
