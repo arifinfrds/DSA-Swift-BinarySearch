@@ -49,5 +49,14 @@ final class BinarySearchTests: XCTestCase {
         
         XCTAssertEqual([result], sample)
     }
+    
+    func test_search_shouldReturnsFoundNumberWhenFoundNumberOnMoreThanOneArrayItem() {
+        let sample = [1, 7, 3]
+        let sut = Program()
+        
+        let result = sut.search(in: sample, target: 7)
+        
+        XCTAssertEqual(result, 7)
+    }
 
 }
